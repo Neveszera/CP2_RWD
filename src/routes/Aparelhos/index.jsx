@@ -9,7 +9,7 @@ function Aparelhos() {
     fetch('http://localhost:5000/aparelhos')
       .then((response) => response.json())
       .then((data) => setAparelhos(data))
-      .catch((error) => {console.log('Erro ao obter aparelhos:', error);});
+      .catch((error) => {console.error('Erro ao obter aparelhos:', error);});
   }, []);
 
   return (

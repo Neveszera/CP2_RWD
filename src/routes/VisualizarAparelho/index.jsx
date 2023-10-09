@@ -12,7 +12,7 @@ function VisualizarAparelho() {
     fetch(`http://localhost:5000/aparelhos/${id}`)
       .then((response) => response.json())
       .then((data) => setAparelho(data))
-      .catch((error) => {console.log('Erro ao carregar aparelho:', error);});
+      .catch((error) => {console.error('Erro ao carregar aparelho:', error);});
   }, [id]);
 
   // Função para lidar com a exclusão do aparelho
@@ -24,7 +24,7 @@ function VisualizarAparelho() {
         navigate('/aparelhos');
       })
       .catch((error) => {
-        console.log('Erro ao excluir aparelho:', error);
+        console.error('Erro ao excluir aparelho:', error);
       });
   };
 

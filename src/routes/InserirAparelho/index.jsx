@@ -56,7 +56,7 @@ function InserirAparelho() {
                 navigate('/aparelhos');
             })
             .catch((error) => {
-                console.log('Erro ao inserir aparelho:', error);
+                console.error('Erro ao inserir aparelho:', error);
             });     
         }
     };
